@@ -2,8 +2,8 @@ import cors from "cors";
 import express from "express";
 import morgan from "morgan";
 
-import * as errorMiddlewares from "./api/shared/middlewares/errorMiddlewares";
-import responseUtilities from "./api/shared/middlewares/responseUtilities";
+import * as errorMiddlewares from "./api/middlewares/errorMiddlewares";
+import responseUtilities from "./api/middlewares/responseUtilities";
 import v1Router from "./api/v1/routes";
 
 const app = express();

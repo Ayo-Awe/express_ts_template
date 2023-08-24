@@ -1,6 +1,6 @@
-import { Response } from "express";
-
 import { HttpErrorCode } from "../errors/httpErrors";
+import { envSchema } from "../env";
+import { z } from "zod";
 
 declare global {
   namespace Express {
@@ -17,5 +17,8 @@ declare global {
     export interface Request {
       user?: { id: number; email: string };
     }
+  }
+  namespace NodeJS {
+    interface ProcessEnv extends z.infer<typeof envSchema> {}
   }
 }

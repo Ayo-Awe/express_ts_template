@@ -1,9 +1,12 @@
 import { Request, Response } from "express";
 
-export function welcomeHandler(req: Request, res: Response) {
-  const payload = {
-    message: "Welcome to memoreel API",
-  };
+class IndexController {
+  welcomeHandler(req: Request, res: Response) {
+    const payload = {
+      message: "Welcome to my template API",
+    };
 
-  res.ok(payload);
+    res.ok(payload);
+  }
 }
+export default new IndexController();

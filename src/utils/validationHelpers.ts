@@ -9,6 +9,7 @@ export function validateRequestBody<T, U extends ZodTypeDef>(
   const result = schema.safeParse(payload);
 
   if (result.success) return { data: result.data };
+
   const { errors } = result.error;
 
   const isMissingFieldError =

@@ -1,4 +1,4 @@
-import { validateRequestBody } from "../../../utils/zodHelpers";
+import { validateRequestBody } from "../../../utils/validationHelpers";
 import { z } from "zod";
 
 export const exampleValidator = (payload: any) => {
